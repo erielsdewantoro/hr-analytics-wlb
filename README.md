@@ -122,7 +122,6 @@ Detail dan catatan penggunaan disimpan di [data/SOURCE.md](data/SOURCE.md).
 - “Attrition risk” hanya merujuk pada kelompok dengan attrition rate relatif tinggi.
 - Dashboard menyajikan statistik deskriptif. Pipeline juga menyediakan uji chi-square dan Mann–Whitney eksploratif, tetapi belum mengontrol faktor perancu, mengoreksi pengujian berganda, atau menyertakan confidence interval.
 - Data tidak memiliki tanggal snapshot/keluar, jam overtime aktual, alasan resign, maupun variabel workload; analisis tidak menunjukkan perubahan dari waktu ke waktu.
-- Kategori Gender pada dataset terbatas pada Female dan Male.
 
 ## Struktur repository
 
