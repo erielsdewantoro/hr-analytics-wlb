@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+:root {
+  --navy: #14283F; --text: #243B53; --muted: #5F7189; --slate: #8495AA;
+  --line: #E3E8EF; --red: #D94B61; --card: #FFFFFF; --bg: #F5F7FA;
+  --shadow: 0 1px 2px rgba(20,40,63,.05), 0 4px 14px rgba(20,40,63,.06);
+}
+
+html, body, [class*="css"], .stApp { font-family: 'Inter', sans-serif; color: var(--text); }
+.stApp { background: var(--bg); }
+.block-container { padding-top: 1.8rem; padding-bottom: 3rem; max-width: 1280px; }
+header[data-testid="stHeader"] { background: transparent; }
+
+/* ---------- Tipografi & hirarki ---------- */
+.stMarkdown h1.app-title { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 2.1rem; line-height: 1.2;
+  color: var(--navy); margin: 0; padding: 0; }
+.app-eyebrow { font-family: 'Manrope', sans-serif; font-weight: 700; letter-spacing: .14em; font-size: .72rem; color: var(--slate); }
+.app-subtitle { color: var(--muted); font-size: .95rem; line-height: 1.55; margin-top: .35rem; max-width: 860px; }
+.stMarkdown h2.section-title { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.45rem; color: var(--navy);
+  margin: .9rem 0 .15rem; padding: 0; }
+.section-sub { color: var(--muted); font-size: .92rem; line-height: 1.5; margin-bottom: 1.1rem; }
+.stMarkdown h3.sub-heading { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--navy);
+  margin: 0 0 .15rem; padding: 0; }
+.sub-caption { color: var(--muted); font-size: .85rem; margin-bottom: .8rem; line-height: 1.5; }
+hr.soft-divider { border: 0; height: 1px; background: linear-gradient(90deg, var(--line), transparent); margin: 1.6rem 0 1.3rem; }
+
+/* ---------- Status bar ---------- */
+.status-bar { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: .6rem 1rem;
+  font-size: .88rem; margin: 1rem 0 1.1rem; box-shadow: var(--shadow); }
+
+/* ---------- Tabs ---------- */
+.stTabs [data-baseweb="tab-list"] { gap: 6px; border-bottom: 1px solid var(--line); }
+.stTabs [data-baseweb="tab"] { font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--muted); padding: .6rem 1.1rem; }
+.stTabs [aria-selected="true"] { color: var(--navy); }
+.stTabs [data-baseweb="tab-highlight"] { background-color: var(--red); }
+
+/* ---------- KPI cards (flexbox) ---------- */
+.kpi-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; }
+.kpi-card { flex: 1 1 0; min-width: 210px; box-sizing: border-box; display: flex; flex-direction: column;
+  justify-content: space-between; gap: .45rem; min-height: 124px; padding: 1.1rem 1.3rem;
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+.kpi-label { font-size: .8rem; font-weight: 600; color: var(--muted); line-height: 1.3; }
+.kpi-value { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 2rem; line-height: 1.1; color: var(--navy);
+  white-space: nowrap; }
+.kpi-value.alert { color: var(--red); }
+.kpi-sub { font-size: .76rem; color: var(--slate); line-height: 1.3; }
+
+/* ---------- Chart / insight card (st.container(border=True, key="card_*")) ---------- */
+div[class*="st-key-card_"] { background: var(--card) !important; border: 1px solid var(--line) !important;
+  border-radius: 14px !important; box-shadow: var(--shadow); padding: 1rem 1.1rem .6rem !important; }
+.chart-title { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: .98rem; line-height: 1.35; color: var(--navy);
+  min-height: 2.7em; /* reservasi 2 baris agar plot sejajar antar card */ display: flex; align-items: flex-start; }
+.chart-note { color: var(--muted); font-size: .82rem; line-height: 1.5; margin: .3rem 0 .4rem; }
+
+/* ---------- Automated highlights ---------- */
+ul.insight-list { margin: .4rem 0 .3rem; padding: 0; list-style: none; }
+ul.insight-list li { position: relative; padding: .55rem .8rem .55rem 1.5rem; margin-bottom: .45rem; background: var(--bg);
+  border-radius: 8px; font-size: .9rem; line-height: 1.55; }
+ul.insight-list li::before { content: ""; position: absolute; left: .65rem; top: 1.05rem; width: 6px; height: 6px;
+  border-radius: 50%; background: var(--navy); }
+ul.insight-list li.warn { background: #FFF6E5; color: #7A5410; }
+ul.insight-list li.warn::before { background: #E6AE45; }
+
+/* ---------- Sidebar (gelap) ---------- */
+section[data-testid="stSidebar"] { border-right: 0; }
+section[data-testid="stSidebar"] .sidebar-title { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.15rem; color: #FFFFFF; }
+section[data-testid="stSidebar"] [data-testid="stCaptionContainer"] { color: #9FB0C6; }
+.side-group { font-size: .7rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: #9FB0C6;
+  margin: 1.2rem 0 .45rem; padding-bottom: .35rem; border-bottom: 1px solid rgba(255,255,255,.14); }
+section[data-testid="stSidebar"] label p { color: #D5DEEA; font-size: .85rem; font-weight: 500; }
+section[data-testid="stSidebar"] [data-baseweb="select"] > div { background: #1F3A57; border-color: rgba(255,255,255,.18); }
+section[data-testid="stSidebar"] [data-baseweb="select"] input { color: #FFFFFF; }
+section[data-testid="stSidebar"] [data-baseweb="select"] svg { fill: #C5D1E0; }
+section[data-testid="stSidebar"] span[data-baseweb="tag"] { background-color: var(--red); color: #FFFFFF; }
+section[data-testid="stSidebar"] span[data-baseweb="tag"] span { color: #FFFFFF; }
+section[data-testid="stSidebar"] .stButton button, section[data-testid="stSidebar"] .stDownloadButton button {
+  background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,.35); border-radius: 8px; font-weight: 600; }
+section[data-testid="stSidebar"] .stButton button:hover, section[data-testid="stSidebar"] .stDownloadButton button:hover {
+  background: rgba(255,255,255,.1); border-color: #FFFFFF; color: #FFFFFF; }
+section[data-testid="stSidebar"] .stDownloadButton button:disabled { opacity: .4; }
+
+.app-footer { text-align: center; color: var(--slate); font-size: .78rem; margin-top: 2.2rem; }
