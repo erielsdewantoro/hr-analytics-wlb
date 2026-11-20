@@ -158,14 +158,6 @@ Repository ini belum menetapkan lisensi open-source untuk kode. Dataset memiliki
 - Mengumpulkan data lintas waktu agar perubahan WLB, overtime, dan attrition dapat dibandingkan.
 - Menghubungkan setiap rekomendasi dengan indikator pemantauan dan evaluasi yang disepakati HR.
 
-## Checklist sebelum push
-
-- Pastikan atribusi IBM/apoorva dan tautan ODbL/DbCL tetap ada saat berbagi dataset turunan atau visualisasi.
-- Periksa git status dan pastikan output baris karyawan dari output_hr_analytics/ tidak ikut ter-stage.
-- Periksa isi data/clean_data.csv dan data mentah; jangan masukkan output baris karyawan ke publik.
-- Simpan presentasi Canva 15 slide di docs/presentations/ dan carousel LinkedIn 12 halaman di docs/linkedin-carousel/.
-- Pastikan README, dashboard, screenshot, dan caption menggunakan angka serta caveat yang sama.
-
 ---
 
 **Dibuat oleh Eriel Setiawan Dewantoro** · HR Analytics · Python, Pandas, Tableau, Streamlit
